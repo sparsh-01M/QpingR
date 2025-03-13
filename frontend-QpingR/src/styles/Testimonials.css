@@ -1,0 +1,87 @@
+/* src/styles/Testimonials.css */
+#testimonials {
+  padding: 80px 20px; /* Increased padding for breathing room */
+  background: #f5f5dc; /* Beige background to match theme */
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 40px; /* Larger for emphasis */
+  font-weight: 700;
+  color: #d4a373; /* Light brown for theme consistency */
+  margin-bottom: 40px; /* More space below */
+  text-transform: uppercase; /* Modern touch */
+  letter-spacing: 1px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Increased gap for spacing */
+  max-width: 1200px; /* Constrain width for larger screens */
+  margin: 0 auto; /* Center the grid */
+}
+
+.testimonial-card {
+  flex: 1 1 320px; /* Slightly wider base size */
+  max-width: 320px;
+  background: #ffffff; /* White card on beige background */
+  padding: 25px; /* More internal padding */
+  border-radius: 10px; /* Softer corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #d4a373; /* Thin brown border for theme */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+}
+
+.testimonial-card .star-rating {
+  color: #ffd700; /* Gold stars */
+  font-size: 20px; /* Slightly larger */
+  margin-bottom: 15px; /* More space below stars */
+}
+
+.testimonial-card p {
+  font-size: 17px; /* Larger for readability */
+  color: #555; /* Softer gray */
+  line-height: 1.5; /* Better line spacing */
+  margin-bottom: 15px;
+}
+
+.testimonial-card span {
+  font-weight: 600; /* Bolder for emphasis */
+  font-size: 15px; /* Slightly larger */
+  color: #333; /* Darker text for contrast */
+}
+
+@media (max-width: 768px) {
+  #testimonials {
+    padding: 50px 15px; /* Reduced padding for mobile */
+  }
+  #testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .testimonial-card {
+    max-width: 100%; /* Full width on smaller screens */
+    width: 90%; /* Slightly less than full width for margins */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card p {
+    font-size: 16px;
+  }
+  .testimonial-card span {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,145 @@
+/* src/styles/Partners.css */
+.partners-container {
+  background: #f5f5dc; /* Beige background */
+  padding: 60px 0; /* Vertical padding */
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow for scrolling */
+}
+
+.partners-container h2 {
+  font-size: 40px; /* Larger title */
+  font-weight: 700;
+  color: #d4a373; /* Light brown theme */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.partners-row {
+  display: flex;
+  width: calc(230px * 14); /* Width for 7 partners, duplicated for seamless scroll */
+  animation: scroll 30s linear infinite; /* Smooth horizontal scroll */
+}
+
+.partner-item {
+  width: 180px; /* Fixed width for each item */
+  margin: 0 25px; /* Horizontal spacing */
+  display: flex;
+  flex-direction: column; /* Stack image and name vertically */
+  align-items: center; /* Center content */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.partner-item img {
+  width: 180px; /* Circular image size */
+  height: 180px;
+  opacity: 0.9; /* Base opacity */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Fit image within circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff; /* White background */
+  padding: 10px; /* Frame effect */
+}
+
+.partner-item img:hover {
+  transform: scale(1.15); /* Scale up on hover */
+  opacity: 1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.partner-item p {
+  margin-top: 10px; /* Space between image and name */
+  font-size: 14px;
+  color: #5c4033; /* Darker brown for readability */
+  font-weight: 500;
+}
+
+/* Pause animation on hover */
+.partners-container:hover .partners-row {
+  animation-play-state: paused;
+}
+
+/* Horizontal scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-230px * 7)); /* Move one full set of 7 */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .partners-container {
+    padding: 50px 0;
+  }
+  .partners-container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .partners-row {
+    width: calc(200px * 14);
+  }
+  .partner-item {
+    width: 160px;
+    margin: 0 20px;
+  }
+  .partner-item img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-container {
+    padding: 40px 0;
+  }
+  .partners-container h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  .partners-row {
+    width: calc(150px * 14);
+    animation: scroll 25s linear infinite; /* Faster for smaller screens */
+  }
+  .partner-item {
+    width: 130px;
+    margin: 0 10px;
+  }
+  .partner-item img {
+    width: 130px;
+    height: 130px;
+  }
+  .partner-item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-container {
+    padding: 30px 0;
+  }
+  .partners-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .partners-row {
+    width: calc(120px * 14);
+    animation: scroll 20s linear infinite;
+  }
+  .partner-item {
+    width: 100px;
+    margin: 0 10px;
+  }
+  .partner-item img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+  }
+  .partner-item p {
+    font-size: 10px;
+  }
+}

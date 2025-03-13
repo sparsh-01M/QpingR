@@ -1,0 +1,97 @@
+/* src/styles/Footer.css */
+.footer {
+  background: #f5f5dc; /* Beige background */
+  padding: 60px 20px; /* Increased padding */
+  text-align: center;
+  color: #333; /* Darker text for contrast */
+  font-size: 16px; /* Slightly larger base font */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between columns */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px; /* Minimum width for smaller screens */
+  padding: 20px;
+}
+
+.about-column h3,
+.social-column h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d4a373; /* Light brown for headings */
+  margin-bottom: 15px;
+}
+
+.about-column p,
+.copyright-column p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #555; /* Softer gray */
+}
+
+.about-column a,
+.social-column a {
+  color: #d4a373; /* Brown links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-column a:hover,
+.social-column a:hover {
+  color: #b8860b; /* Darker brown on hover */
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between social links */
+}
+
+.social-column a {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.copyright-column p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px;
+  }
+  .about-column h3,
+  .social-column h3 {
+    font-size: 20px;
+  }
+  .about-column p,
+  .social-column a {
+    font-size: 14px;
+  }
+}
