@@ -23,7 +23,10 @@ app.use('/api/site-content', siteContentRoutes); // Add this
 const startServer = async () => {
   try {
     await connectDB();
-    app.listen(port, () => console.log(`Server started on http://localhost:${port}`));
+    app.listen(port, () =>
+  console.log(`Server started on https://qpingr.onrender.com`)
+);
+
   } catch (error) {
     console.error('Server failed to start:', error);
   }
